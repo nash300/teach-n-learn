@@ -1,0 +1,80 @@
+/* 
+---------------------------------------------------------------------------------------------------------------------------------------
+Styling for the navigation menu bar:
+Origin: NavigationMenu component
+The navigation menu appears fixed at the top of the screen. This element is brought forward to the top layer by defining a z-index of 1
+---------------------------------------------------------------------------------------------------------------------------------------
+*/
+#navigation-menu-div {
+  background-color: white;
+  height: 20%;
+  position: fixed; /* Fixed position */
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.5);
+  /*top: 0; /* Center vertically */
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1; /* Ensure the navigation menu appears above other elements */
+}
+
+/*
+------------------------------------------------------------------------------------------------------------------------------------
+Styling for the main wrapping div:
+Origin: App.jsx
+This div acts as the main display area for the website. All elements, except the navigation menu, appear within the area of this div
+------------------------------------------------------------------------------------------------------------------------------------
+*/
+#main-wrapper-div {
+  position: absolute; /* Position relative to the nearest positioned ancestor*/
+  background-color: #f7a101;
+  padding: 0px;
+  border: 0px solid #fcfcfc;
+  border-radius: 2px;
+  width: 80%;
+  height: 80%;
+  max-width: 1500px;
+  top: 20%; /* Center vertically */
+  left: 50%; /* Center horizontally */
+  transform: translate(-50%); /* Adjust both vertical and horizontal position */
+  justify-content: center; /* Center child elements vertically */
+}
+
+/*
+********************************************************************************************
+The following section defines media queries for screen sizes smaller than those of computers
+********************************************************************************************
+ 
+-------------------------------------------------------------------   
+.                            tablets  
+------------------------------------------------------------------- 
+*/
+@media (min-width: 601px) and (max-width: 1024px) {
+  #navigation-menu-div {
+    height: 100px;
+    background-color: rgb(108, 167, 108);
+  }
+
+  #main-wrapper-div {
+    width: 92%;
+    height: 100%;
+    top: 100px;
+  }
+}
+
+/* 
+-------------------------------------------------------------------   
+.                         mobile phones  
+------------------------------------------------------------------- 
+*/
+@media (max-width: 600px) {
+  #navigation-menu-div {
+    height: 50px;
+    background-color: rgb(185, 110, 110);
+  }
+
+  #main-wrapper-div {
+    width: 100%;
+    height: 100%;
+    top: 50px;
+  }
+}
