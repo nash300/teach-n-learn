@@ -1,18 +1,39 @@
-import "./App.css";
-import HomePage from "./components/HomePage";
-import NavigationMenu from "./components/NavigationMenu";
+import React from "react";
+import "./index.css";
 
 const App = () => {
   return (
-    <div>
-      <NavigationMenu />
-      <div id="main-wrapper-div" className="mask">
-        {/*Everything appears within the area of this div*/}
+    <div id="pageWrapper">
+      <div id="topBar" className="top-section">
+        <div id="logoBar">
+          <img src="./src/images/logo.png" alt="the logo" id="logo" />
+        </div>
+        <nav id="navBar" className="navBarClass">
+          <ul>
+            <li>
+              <a href="">Home</a>
+            </li>
+            <li>
+              <a href="">Features</a>
+            </li>
+            <li>
+              <a href="">Data policy</a>
+            </li>
+            <li>
+              <a href="">About</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
 
-        <HomePage />
+      <div id="main-container">
+        <span id="main-container-left">
+          {/*Everything appears within the area of this div*/}
+        </span>
+
+        <span id="main-container-right"></span>
       </div>
     </div>
   );
 };
-
 export default App;
