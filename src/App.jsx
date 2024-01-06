@@ -4,7 +4,7 @@ import "./index.css";
 const App = () => {
   return (
     <div id="pageWrapper">
-      <div id="topBar" className="top-section">
+      <div id="topBar">
         <div id="logoBar">
           <img src="./src/images/logo.png" alt="the logo" id="logo" />
         </div>

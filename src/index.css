@@ -4,7 +4,6 @@ body {
 }
 
 #pageWrapper {
-  flex-direction: column;
   margin: auto;
   max-width: 1500px;
   height: 100vh;
@@ -12,7 +11,7 @@ body {
   box-shadow: 0 0 200px rgb(68, 68, 68);
 }
 
-.top-section {
+#topBar {
   display: flex;
   height: 15%;
 }
@@ -61,7 +60,7 @@ body {
   float: left;
   flex: 1;
   overflow: hidden;
-  box-shadow: 1px 1px 15px rgb(134, 134, 134);
+  box-shadow: 1px 1px 15px rgb(0, 0, 0);
   border-radius: 10px 10px 0 0;
   font-variant: small-caps;
   font-weight: bold;
@@ -87,4 +86,63 @@ body {
   background-size: cover;
   background-position: bottom center;
 }
-/*--------------------------------------------*/
+/*--------------------------------------------------------------------*/
+/* For Mobile Devices */
+@media (max-width: 767px) {
+  #pageWrapper {
+    display: grid;
+    width: 100vw;
+  }
+
+  #topBar {
+    display: block;
+    height: 30vh;
+  }
+
+  #logoBar {
+    height: 30%;
+  }
+
+  #logoBar img {
+    text-align: center;
+  }
+
+  #navBar {
+    width: 100%;
+    height: 70%;
+  }
+
+  #navBar ul {
+    display: inline;
+    background-color: rgb(255, 255, 255);
+    height: 100%;
+  }
+
+  .navBarClass li {
+    width: 100%;
+    height: 25%;
+    background-color: rgb(142, 206, 68);
+    border-radius: 0;
+  }
+
+  .navBarClass a {
+    color: black;
+    text-align: center;
+    padding: 0;
+    height: 100%;
+  }
+
+  #main-container {
+    display: flex;
+    flex-flow: row;
+    height: 80vh;
+  }
+}
+
+/* For Tablet Devices ---------------------------------------------*/
+@media (min-width: 768px) and (max-width: 1023px) {
+  #pageWrapper {
+    flex-direction: column;
+    width: 90vw;
+  }
+}
