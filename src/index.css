@@ -8,7 +8,7 @@ body {
   max-width: 1500px;
   height: 100vh;
   width: 80vw;
-  box-shadow: 0 0 200px rgb(68, 68, 68);
+  box-shadow: 0 0 100px rgb(68, 68, 68);
 }
 
 #topBar {
@@ -19,6 +19,7 @@ body {
 #logoBar {
   width: 40%;
   margin: auto;
+  background-color: white;
 }
 
 #logoBar img {
@@ -37,34 +38,35 @@ body {
   display: flex;
   justify-content: flex-end;
   list-style-type: none;
-  padding: 0px;
   margin: 0px;
   background-color: rgb(255, 255, 255);
   width: 100%;
-}
-
-.navBarClass a {
-  display: block;
-  color: black;
-  text-decoration: none;
-  padding: 25px;
+  height: 30%;
   text-align: center;
-}
-
-.navBarClass a:hover {
-  background-color: rgb(68, 107, 72);
-  color: white;
 }
 
 .navBarClass li {
   float: left;
   flex: 1;
-  overflow: hidden;
-  box-shadow: 1px 1px 15px rgb(0, 0, 0);
-  border-radius: 10px 10px 0 0;
+  box-shadow: 1px 1px 15px rgb(158, 158, 158);
+  border-radius: 1px 1px 0 0;
   font-variant: small-caps;
   font-weight: bold;
   font-size: 120%;
+  padding: 10px;
+  white-space: nowrap;
+}
+.navBarClass a {
+  display: inline;
+  color: black;
+  text-decoration: none;
+  height: 30%;
+  padding: 10px;
+}
+
+.navBarClass li:hover {
+  background-color: rgb(68, 107, 72);
+  color: white;
 }
 
 #main-container {
@@ -92,15 +94,21 @@ body {
   #pageWrapper {
     display: grid;
     width: 100vw;
+    box-shadow: none;
   }
 
   #topBar {
     display: block;
     height: 30vh;
+    position: sticky;
+    top: 0px;
   }
 
   #logoBar {
     height: 30%;
+    width: 100%;
+    text-align: center;
+    background-color: white;
   }
 
   #logoBar img {
@@ -113,7 +121,6 @@ body {
   }
 
   #navBar ul {
-    display: inline;
     background-color: rgb(255, 255, 255);
     height: 100%;
   }
@@ -133,16 +140,27 @@ body {
   }
 
   #main-container {
-    display: flex;
-    flex-flow: row;
-    height: 80vh;
+    display: block;
+    height: 70vh;
+  }
+
+  #main-container-left {
+    display: block;
+    background-color: rgb(255, 255, 255);
+    width: 100%;
+    height: 50%;
+  }
+
+  #main-container-right {
+    display: block;
+    width: 100%;
+    height: 100%;
+
+    background-image: none;
+    background-color: rgb(141, 248, 146);
   }
 }
 
 /* For Tablet Devices ---------------------------------------------*/
 @media (min-width: 768px) and (max-width: 1023px) {
-  #pageWrapper {
-    flex-direction: column;
-    width: 90vw;
-  }
 }
