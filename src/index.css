@@ -1,25 +1,23 @@
 body {
   margin: 0;
   padding: 0;
+  background-color: white;
 }
 
 #pageWrapper {
-  margin: auto;
-  max-width: 1500px;
   height: 100vh;
-  width: 80vw;
+  width: 100vw;
   box-shadow: 0 0 100px rgb(68, 68, 68);
 }
 
 #topBar {
-  display: flex;
+  display: block;
   height: 15%;
+  border-bottom: 2px solid #bdbdbd;
 }
 
 #logoBar {
-  width: 40%;
-  margin: auto;
-  background-color: white;
+  height: 80%;
 }
 
 #logoBar img {
@@ -29,54 +27,54 @@ body {
 
 #navBar {
   display: flex;
-  align-items: flex-end;
-  width: 60%;
+  height: 20%;
+  max-width: 100%;
   justify-content: flex-end;
 }
 
 #navBar ul {
   display: flex;
-  justify-content: flex-end;
+  float: right;
+  flex: 1;
   list-style-type: none;
+  justify-content: flex-end;
   margin: 0px;
-  background-color: rgb(255, 255, 255);
-  width: 100%;
-  height: 30%;
-  text-align: center;
+  max-width: 25%;
 }
 
 .navBarClass li {
-  float: left;
-  flex: 1;
-  box-shadow: 1px 1px 15px rgb(158, 158, 158);
-  border-radius: 1px 1px 0 0;
-  font-variant: small-caps;
-  font-weight: bold;
-  font-size: 120%;
-  padding: 10px;
+  display: flex;
+  flex: 1; /* equal width*/
+  align-items: center; /*virtical*/
+  justify-content: center; /**horizontical*/
   white-space: nowrap;
+  font-variant: small-caps;
+  border: 1px solid rgb(209, 209, 209);
+  background-color: rgb(238, 237, 237);
+  box-shadow: inset 5px 0 5px -5px #d8d8d8, inset -5px 0 5px -5px #cecece;
 }
 .navBarClass a {
-  display: inline;
-  color: black;
   text-decoration: none;
-  height: 30%;
-  padding: 10px;
+  padding: 50px;
+  color: rgb(0, 0, 0);
+  font-weight: bold;
 }
-
 .navBarClass li:hover {
   background-color: rgb(68, 107, 72);
+}
+
+.navBarClass a:hover {
+  text-decoration: none;
   color: white;
 }
 
 #main-container {
   display: flex;
-  flex-flow: row;
   height: 85%;
 }
 
 #main-container-left {
-  background-color: rgb(141, 248, 146);
+  background-color: rgb(255, 255, 255);
   width: 35%;
   height: 100%;
 }
@@ -84,83 +82,10 @@ body {
 #main-container-right {
   width: 65%;
   height: 100%;
+
   background-image: url("./images/background.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
   background-size: cover;
-  background-position: bottom center;
 }
 /*--------------------------------------------------------------------*/
-/* For Mobile Devices */
-@media (max-width: 767px) {
-  #pageWrapper {
-    display: grid;
-    width: 100vw;
-    box-shadow: none;
-  }
-
-  #topBar {
-    display: block;
-    height: 30vh;
-    position: sticky;
-    top: 0px;
-  }
-
-  #logoBar {
-    height: 30%;
-    width: 100%;
-    text-align: center;
-    background-color: white;
-  }
-
-  #logoBar img {
-    text-align: center;
-  }
-
-  #navBar {
-    width: 100%;
-    height: 70%;
-  }
-
-  #navBar ul {
-    background-color: rgb(255, 255, 255);
-    height: 100%;
-  }
-
-  .navBarClass li {
-    width: 100%;
-    height: 25%;
-    background-color: rgb(142, 206, 68);
-    border-radius: 0;
-  }
-
-  .navBarClass a {
-    color: black;
-    text-align: center;
-    padding: 0;
-    height: 100%;
-  }
-
-  #main-container {
-    display: block;
-    height: 70vh;
-  }
-
-  #main-container-left {
-    display: block;
-    background-color: rgb(255, 255, 255);
-    width: 100%;
-    height: 50%;
-  }
-
-  #main-container-right {
-    display: block;
-    width: 100%;
-    height: 100%;
-
-    background-image: none;
-    background-color: rgb(141, 248, 146);
-  }
-}
-
-/* For Tablet Devices ---------------------------------------------*/
-@media (min-width: 768px) and (max-width: 1023px) {
-}
