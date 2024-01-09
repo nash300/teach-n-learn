@@ -1,7 +1,10 @@
 import React from "react";
 import "../styles/Topbar.css";
 
+//import displayChanger from "./../hooks/displayChanger";
+
 const Topbar = ({ updateDisplay }) => {
+  //const [] = displayChanger();
   return (
     <div id="topBar">
       <div id="logoBar">

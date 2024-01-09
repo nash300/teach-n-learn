@@ -1,4 +1,4 @@
-import img from "../images/background.jpg";
+import img from "../../images/background.jpg";
 
 /*
 This renders the background image when the user clicks on the "Home" button 

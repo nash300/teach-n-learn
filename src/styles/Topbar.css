@@ -32,7 +32,7 @@
   white-space: nowrap;
   font-variant: small-caps;
   border: 1px solid rgb(209, 209, 209);
-  background-color: rgb(238, 237, 237);
+  background-color: rgb(250, 247, 247);
   box-shadow: inset 5px 0 5px -5px #d8d8d8, inset -5px 0 5px -5px #cecece;
 }
 .navBarClass a {
@@ -42,10 +42,9 @@
   font-weight: bold;
 }
 .navBarClass li:hover {
-  background-color: rgb(68, 107, 72);
+  background-color: #07e980;
 }
 
 .navBarClass a:hover {
   text-decoration: none;
-  color: white;
 }

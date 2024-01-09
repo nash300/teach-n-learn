@@ -1,10 +1,10 @@
-import About from "./../components/About";
+import About from "../components/displaySection/About";
 import { useState } from "react";
-import Home from "./../components/Home";
-import DataPolicy from "./../components/DataPolicy";
-import Features from "./../components/Features";
+import Home from "../components/displaySection/Home";
+import DataPolicy from "../components/displaySection/DataPolicy";
+import Features from "../components/displaySection/Features";
 
-const DisplayChanger = () => {
+const displayChanger = () => {
   const [display, setDisplay] = useState(<Home />);
 
   const updateDisplay = (element) => {
@@ -22,4 +22,4 @@ const DisplayChanger = () => {
   return { display, updateDisplay };
 };
 
-export default DisplayChanger;
+export default displayChanger;

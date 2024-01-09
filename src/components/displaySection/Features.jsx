@@ -24,16 +24,13 @@ const Features = () => {
       odit nesciunt veniam, pariatur repellat eaque cum. Recusandae iste
       consequatur obcaecati molestias delectus eos!
       <ul>
-        <li>adipisicing</li>
-        <li>animi</li>
-        <li>impedit</li>
-        <li>adipisicing</li>
-        <li>animi</li>
-        <li>impedit</li>
-        <li>illum</li>
-        <li>Aspernatur</li>
-        <li>illum</li>
-        <li>Aspernatur</li>
+        <li>Creating own profile</li>
+        <li>User Authentication</li>
+        <li>Create/Manage profile</li>
+        <li>Add users as friends</li>
+        <li>Whiteboard</li>
+        <li>Calendar</li>
+        <li>Feedback</li>
       </ul>
     </span>
   );
