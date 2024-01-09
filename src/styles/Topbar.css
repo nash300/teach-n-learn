@@ -1,21 +1,3 @@
-body {
-  margin: 0;
-  padding: 0;
-  background-color: white;
-}
-
-#pageWrapper {
-  height: 100vh;
-  width: 100vw;
-  box-shadow: 0 0 100px rgb(68, 68, 68);
-}
-
-#topBar {
-  display: block;
-  height: 15%;
-  border-bottom: 2px solid #bdbdbd;
-}
-
 #logoBar {
   height: 80%;
 }
@@ -67,20 +49,3 @@ body {
   text-decoration: none;
   color: white;
 }
-
-#main-container {
-  display: flex;
-  height: 85%;
-}
-
-#buttonSection {
-  background-color: rgb(255, 255, 255);
-  width: 35%;
-  height: 100%;
-}
-
-#displaySection {
-  width: 65%;
-  height: 100%;
-}
-/*--------------------------------------------------------------------*/

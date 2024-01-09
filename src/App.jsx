@@ -1,39 +1,18 @@
-import React from "react";
 import "./index.css";
+import Topbar from "./components/Topbar";
+import DisplayChanger from "./hooks/displayChanger";
 
 const App = () => {
+  const { display, updateDisplay } = DisplayChanger();
   return (
     <div id="pageWrapper">
-      <div id="topBar">
-        <div id="logoBar">
-          <img src="./src/images/logo.png" alt="the logo" id="logo" />
-        </div>
-        <nav id="navBar" className="navBarClass">
-          <ul>
-            <li>
-              <a href="">Home</a>
-            </li>
-            <li>
-              <a href="">Features</a>
-            </li>
-            <li>
-              <a href="">Data policy</a>
-            </li>
-            <li>
-              <a href="">About</a>
-            </li>
-          </ul>
-        </nav>
-      </div>
-
+      <Topbar updateDisplay={updateDisplay}></Topbar>
       <div id="main-container">
-        <span id="main-container-left">
-          {/*Everything appears within the area of this div*/}
-        </span>
-
-        <span id="main-container-right"></span>
+        <span id="buttonSection"></span>
+        <span id="displaySection">{display}</span>
       </div>
     </div>
   );
 };
+
 export default App;
