@@ -1,4 +1,4 @@
-const About = () => {
+const AboutDisplay = () => {
   const style = {
     padding: "50px",
     height: "500px",
@@ -150,4 +150,4 @@ const About = () => {
   );
 };
 
-export default About;
+export default AboutDisplay;

@@ -5,7 +5,7 @@ This renders the background image when the user clicks on the "Home" button
 in the navigation bar
 */
 
-const Home = () => {
+const HomeDisplay = () => {
   const imageStyle = {
     width: "100%",
     height: "100%",
@@ -15,4 +15,4 @@ const Home = () => {
   return <img id="img" src={img} style={imageStyle} alt="Background" />;
 };
 
-export default Home;
+export default HomeDisplay;

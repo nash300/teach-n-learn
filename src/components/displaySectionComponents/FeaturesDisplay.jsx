@@ -1,4 +1,4 @@
-const Features = () => {
+const FeaturesDisplay = () => {
   const style = {
     padding: "50px",
     height: "500px",
@@ -36,4 +36,4 @@ const Features = () => {
   );
 };
 
-export default Features;
+export default FeaturesDisplay;

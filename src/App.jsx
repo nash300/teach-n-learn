@@ -1,16 +1,24 @@
+import React from "react";
 import "./index.css";
 import Topbar from "./components/Topbar";
-import DisplayChanger from "./hooks/displayChanger";
-import ButtonChanger from "./hooks/buttonChanger";
+import { useDisplaySection } from "./hooks/useMyHooks";
 
 const App = () => {
-  const { display, updateDisplay } = DisplayChanger();
-  const { showButtons } = ButtonChanger();
+  const [display, updateDisplay] = useDisplaySection();
+
   return (
     <div id="pageWrapper">
-      <Topbar updateDisplay={updateDisplay}></Topbar>
+      <Topbar updateDisplayComponent={updateDisplay} />
       <div id="main-container">
-        <span id="buttonSection">{showButtons}</span>
+        <span id="buttonSection">
+          <span>
+            <button>eee</button>
+            <button>eee</button>
+            <button>eee</button>
+            <button>eee</button>
+            <button>eee</button>
+          </span>
+        </span>
         <span id="displaySection">{display}</span>
       </div>
     </div>

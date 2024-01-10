@@ -1,4 +1,4 @@
-const DataPolicy = () => {
+const DataPolicyDisplay = () => {
   const style = {
     padding: "50px",
     height: "500px",
@@ -211,4 +211,4 @@ const DataPolicy = () => {
     </span>
   );
 };
-export default DataPolicy;
+export default DataPolicyDisplay;
