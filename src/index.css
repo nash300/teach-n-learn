@@ -2,11 +2,17 @@
 This document includes stylings for the main layout. 
 Stylings for the navigation section (Topbar) are included in a different file called Topbar.css.
 */
-
+#root {
+  background-color: rgb(255, 255, 255);
+  width: 100vw;
+  height: 100vh;
+}
 body {
+  width: 100%;
+  height: 100%;
   margin: 0;
-  padding: 0;
-  background-color: white;
+  overflow: hidden;
+  background-color: rgb(255, 255, 255);
 }
 
 h2 {
@@ -21,6 +27,7 @@ h2 {
 h3,
 li {
   text-transform: capitalize;
+  list-style-type: none;
 }
 
 /*---------------------------------------------------
@@ -59,27 +66,22 @@ The number of buttons depends on the functional status of it's corresponding ste
 Therefore, this section virtically stacks the buttons .
 */
 #buttonSection {
-  width: 35%;
   display: flex;
+  flex-direction: column;
+  width: 35%;
   background-color: rgb(255, 255, 255);
   align-items: center;
   justify-content: center;
 }
 
-#buttonSection span {
-  /*buttons are returned wrapped in "spann"*/
-  width: 75%;
-}
-
-#buttonSection span button {
+#buttonSection button {
   border-radius: 50px;
   background: #141414;
   color: #dfdedf;
-  width: 100%;
+  width: 80%;
   height: 5vh;
   margin-bottom: 10px;
   font-variant: small-caps;
-  white-space: nowrap;
   border-style: outset;
   border-width: 6px;
   border-color: #000000;
@@ -87,7 +89,7 @@ Therefore, this section virtically stacks the buttons .
   overflow: hidden;
 }
 
-#buttonSection span button:hover {
+#buttonSection button:hover {
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
   background: #07e980;
   color: black;
@@ -97,9 +99,14 @@ Therefore, this section virtically stacks the buttons .
 }
 
 #displaySection {
+  display: flex;
   width: 65%; /*restricting the display area to use 65% of the screen width. The other 35% is assigned to the buttonSection*/
   overflow: auto; /*This applies to all elements except the background image of the home page. The background image is rendered with it's own CSS*/
-  overflow-y: scroll; /* Always show vertical scrollbar */
 }
 
+#display-wrapper {
+  width: 75%;
+  margin-right: auto;
+  margin-left: auto;
+}
 /*--------------------------------------------------------------------*/

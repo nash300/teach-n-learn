@@ -1,35 +1,5 @@
 import { useState } from "react";
-import Home from "../components/displaySectionComponents/HomeDisplay";
-
-/*
-------------------------------------------------------------------------------------
-This hook keeps track of the element which is being displayed in the displaySection
-------------------------------------------------------------------------------------
-*/
-const useDisplaySection = () => {
-  const [display, setDisplay] = useState(<Home />);
-
-  const updateDisplay = (newComponent) => {
-    setDisplay(newComponent);
-  };
-
-  return [display, updateDisplay];
-};
-
-/*
----------------------------------------------------------------------------
-This hook keeps track of the button that are shown in the "Button Section" 
---------------------------------------------------------------------------
-*/
-const useButtonSection = () => {
-  const [buttonSection, setButtonSection] = useState();
-
-  const updateButtonSection = (newComponent) => {
-    setButtonSection(newComponent);
-  };
-
-  return [buttonSection, updateButtonSection];
-};
+import Home from "./../pages/Home";
 
 /*
 ---------------------------------------------------------------------
@@ -37,7 +7,7 @@ This hook keeps track of the user type (ex: "Student" or "Teacher")
 --------------------------------------------------------------------
 */
 const useUserType = () => {
-  const [userType, setUserType] = useState("Student");
+  const [userType, setUserType] = useState("");
 
   const setUserTypeToStudent = () => {
     setUserType("Student");
@@ -50,10 +20,27 @@ const useUserType = () => {
 };
 
 /*
+------------------------------------------------------------------------------------
+This hook keeps track of the element which is being displayed in the displaySection
+------------------------------------------------------------------------------------
+*/
+const useDisplayPage = () => {
+  const [displayPage, setDisplayPage] = useState(Home);
+
+  const updatePage = (newPage) => {
+    setDisplayPage(newPage);
+  };
+
+  return [displayPage, updatePage];
+};
+
+/*------------------------------------------------------------------------------------------------*/
+
+/*
 .
 .
 .
 .
 -------------------------------------------------------------------------------------------------------------------------
 */
-export { useDisplaySection, useButtonSection, useUserType };
+export { useDisplayPage, useUserType };

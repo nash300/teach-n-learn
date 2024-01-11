@@ -1,12 +1,11 @@
 import React from "react";
 import "../styles/Topbar.css";
+import Home from "../pages/Home";
+import About from "./../pages/About";
+import DataPolicy from "./../pages/DataPolicy";
+import Features from "./../pages/Features";
 
-import Home from "./displaySectionComponents/HomeDisplay";
-import Features from "./displaySectionComponents/FeaturesDisplay";
-import DataPolicy from "./displaySectionComponents/DataPolicyDisplay";
-import About from "./displaySectionComponents/AboutDisplay";
-
-const Topbar = ({ updateDisplayComponent }) => {
+const Topbar = ({ updatePage }) => {
   return (
     <div id="topBar">
       <div id="logoBar">
@@ -15,23 +14,23 @@ const Topbar = ({ updateDisplayComponent }) => {
       <nav id="navBar" className="navBarClass">
         <ul>
           <li>
-            <a href="#" onClick={() => updateDisplayComponent(<Home />)}>
+            <a href="#" onClick={() => updatePage(Home)}>
               Home
             </a>
           </li>
 
           <li>
-            <a href="#" onClick={() => updateDisplayComponent(<Features />)}>
+            <a href="#" onClick={() => updatePage(Features)}>
               Features
             </a>
           </li>
           <li>
-            <a href="#" onClick={() => updateDisplayComponent(<DataPolicy />)}>
+            <a href="#" onClick={() => updatePage(DataPolicy)}>
               Data policy
             </a>
           </li>
           <li>
-            <a href="#" onClick={() => updateDisplayComponent(<About />)}>
+            <a href="#" onClick={() => updatePage(About)}>
               About
             </a>
           </li>
